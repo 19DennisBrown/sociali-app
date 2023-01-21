@@ -1,0 +1,238 @@
+*{
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0px;  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;  height: 100vh;
+}
+.container{
+  display: grid;  
+}
+/* head section styling */
+.header-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: grey;
+  height: 100px;  width: 100%;
+  border-bottom-left-radius: 41px;
+  border-top-right-radius: 41px;
+}
+/* logo */
+.logo{
+  font-size: 50px;
+  font-weight: 600;
+  -webkit-text-stroke: 2px  black;
+  color: transparent;
+}
+/* search section */
+.search input[type="search"]{
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+.search input::placeholder{
+  font-size: 18px;
+}
+/* navigation header  links */
+.nav-links  ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-links  li{
+  margin-left: 23px;
+  font-size: 19px;
+  font-weight: 500;
+  position: relative;
+  padding: 3px;
+  transition: .7s linear;
+  cursor: pointer;
+}
+.nav-links  li:hover{
+  color: white;
+}
+.nav-links  li::after{
+  content: '';
+  position: absolute;
+  width: 50%;  height: 5px;
+  background-color: black;
+  bottom: 0;  right: 0;
+  border-radius: 9px;
+  transition: .6s   linear;
+}
+.nav-links  li:hover::after{
+  width: 100%;
+  background-color: white;
+}
+/* profile  styling */
+.profile-det{
+  width: 50px;  height: 50px;
+border-radius: 50%;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.356), -3px -3px 2px rgba(255, 255, 255, 0.245);
+  cursor: pointer;
+}
+
+/* ENDS */
+
+
+.main-content{
+display: grid;
+grid-template-columns: repeat(3,  1fr);
+width: 100%;  height: 544px;
+}
+
+.aside-section, .main-section,  .nav-section{
+  border: 2px solid white;
+  height: 100%;  width: 100%;
+}
+/* sidebar  styling */
+.nav-section{
+  border-right: 2px  solid rgb(168, 166, 166);
+  
+}
+.chats{
+  display: grid;
+  place-items: center;
+  width: 100%;  height: 100%;
+  background-color: rgba(128, 128, 128, 0.116);
+  border-radius: 14px;
+}
+.chat{
+  width: 250px; height: 100px;
+  padding: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.514);
+  position: relative;
+  border-radius: 4px;
+  transition: .4s linear;
+  cursor: pointer;
+}
+.chat:hover{
+  box-shadow: -3px -3px 7px black;
+}
+.chat:hover .chat-header{
+  width: 60px;  height: 60px;
+  border-radius: 50%;
+}
+.chat-header{
+  transition: .5s ;
+  width: 50px;  height: 50px;
+  border: 2px  dashed  black;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px; left: -10px;
+}
+.chat-text{
+  position: absolute;
+  left: 50px;
+  line-height: 20px;
+  font-size: 17px;
+  font-weight: 520;
+  transition: .5s;
+}
+.chat:hover  .chat-text{
+  font-size: 14px;
+}
+
+/* ends */
+/*  MAIN  CONTENT SECTION */
+.main-section{
+  padding-top: 21px;
+  overflow-x: scroll;
+  width: 700px;
+  display: grid;
+  place-items: center;
+
+}
+.main-section::-webkit-scrollbar{
+display: none;
+}
+.post-content{
+  padding: 10px;
+  height: 130px;  width: 400px;
+  box-shadow: 1px 1px 3px rgb(219, 218, 218);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  border: none;
+  margin: 20px;
+}
+.profile{
+  width: 50px;  height: 50px;
+  background-color: grey;
+  border-radius: 50%;
+}
+.post{
+  width: 300px;  height: 90px;
+  background-color: grey;
+  border-radius: 12px;
+}
+/* Ends */
+
+/* Aside    styling */
+.aside-section{
+  border-left: 2px  solid rgb(133, 130, 130);
+  
+}
+.new-followers{
+  width: 100%;  height: 110px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+.followed,  .follow{
+  height: 90px; width: 90px;
+  background-color: grey;
+  border-radius: 50%;
+  padding-right: -200px;
+  border: 3px solid white;
+}
+.two,   .three{
+  margin-left: -60px;
+}
+.four,  .five,  .six{
+  margin-left: -60px;
+}
+.trending-posts{
+  height: 200px;  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 20px;
+}
+.profile-pic{
+  width: 90px;  height: 90px;
+  border-radius: 50%;
+  background-color: black;
+  border: 3px solid white;
+  margin-bottom: -70px;
+  z-index: 2;
+}
+.trend-post{
+  background-color: black;
+  width: 90%;
+  height: 100px;
+  border-radius: 12px;
+}
+.new-follows{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.follow{
+  box-shadow: inset 3px 3px 5px black;
+}
+
+/* ends here */
+.footer-section{
+  width: 100%;  height: 50px;
+  background-color: grey;
+}
+
